@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs')  %>
+    <ul>
+       <% products.forEach(item=>{ %>
+        <li>
+            <a href="product/<%= item.id%>">name is : <%= item.name%> price is <%= item.price%> </a>
+        </li>
+        <% }) %>
+    <%- include('./partials/footer.ejs') %>
+
+    </ul>
+</body>
+</html>
